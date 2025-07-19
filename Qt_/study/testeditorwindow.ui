@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TestEditorWindow</class>
+ <widget class="QDialog" name="TestEditorWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Редактор теста</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QDialog {
+        background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 #4e54c8, stop:1 #8f94fb);
+    }
+    QLabel {
+        font-size: 14pt;
+        color: white;
+    }
+    QLineEdit, QTextEdit {
+        background-color: #ecf0f1;
+        border: 1px solid #bdc3c7;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 12pt;
+    }
+    QPushButton {
+        background-color: #3498db;
+        color: white;
+        font-size: 12pt;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        min-width: 100px;
+        margin: 10px;
+    }
+    QPushButton:hover {
+        background-color: #2980b9;
+    }
+    QPushButton:pressed {
+        background-color: #1abc9c;
+    }
+    QCheckBox {
+        color: white;
+        font-size: 12pt;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <!-- Верхняя панель -->
+   <item>
+    <layout class="QHBoxLayout" name="topPanelLayout">
+     <item>
+      <widget class="QPushButton" name="exitButton">
+       <property name="text">
+        <string>Выйти</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="titleLabel">
+       <property name="text">
+        <string>Редактор теста</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <!-- Название теста -->
+   <item>
+    <layout class="QHBoxLayout" name="testTitleLayout">
+     <item>
+      <widget class="QLabel" name="testTitleLabel">
+       <property name="text">
+        <string>Название теста:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="testTitleDisplay">
+       <property name="text">
+        <string>Загрузка...</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 14pt; color: white;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <!-- Счетчик вопросов и управление -->
+   <item>
+    <layout class="QHBoxLayout" name="questionCounterLayout">
+     <item>
+      <widget class="QLabel" name="questionCounterLabel">
+       <property name="text">
+        <string>Вопрос 1 из 5</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 12pt; color: white;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="addQuestionButton">
+       <property name="text">
+        <string>+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="removeQuestionButton">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <!-- Вопрос -->
+   <item>
+    <layout class="QVBoxLayout" name="questionLayout">
+     <item>
+      <widget class="QLabel" name="questionLabel">
+       <property name="text">
+        <string>Вопрос:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="questionEdit"/>
+     </item>
+    </layout>
+   </item>
+   <!-- Ответы -->
+   <item>
+    <layout class="QVBoxLayout" name="answersLayout">
+     <item>
+      <widget class="QLabel" name="answersLabel">
+       <property name="text">
+        <string>Ответы:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="answersGridLayout">
+       <!-- Ответы будут добавлены динамически -->
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="answerButtonsLayout">
+       <item>
+        <widget class="QPushButton" name="addAnswerButton">
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="removeAnswerButton">
+         <property name="text">
+          <string>-</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <!-- Навигация -->
+   <item>
+    <layout class="QHBoxLayout" name="navigationLayout">
+     <item>
+      <widget class="QPushButton" name="backButton">
+       <property name="text">
+        <string>Назад</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="nextButton">
+       <property name="text">
+        <string>Вперед</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="finishButton">
+       <property name="text">
+        <string>Завершить</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
