@@ -1,0 +1,10 @@
+release/clients.o
+release/main.o
+release/mainwindow.o
+release/materials.o
+release/orderform.o
+release/qrc_resources.o
+release/moc_clients.o
+release/moc_mainwindow.o
+release/moc_materials.o
+release/moc_orderform.o

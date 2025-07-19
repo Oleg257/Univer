@@ -1,0 +1,28 @@
+QWidget {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 12px;
+    background-color: #f7f7f7;
+}
+
+QPushButton {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+QPushButton:hover {
+    background-color: #005a9e;
+}
+
+QTableWidget {
+    border: 1px solid #dcdcdc;
+    gridline-color: #dcdcdc;
+    selection-background-color: #0078d7;
+    selection-color: white;
+}
+
+QTabWidget::pane {
+    border: 1px solid #dcdcdc;
+}

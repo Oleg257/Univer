@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OrderForm</class>
+ <widget class="QDialog" name="OrderForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Добавить/Редактировать заказ</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <!-- Клиент -->
+   <item>
+    <widget class="QLabel" name="labelClient">
+     <property name="text">
+      <string>Клиент:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="comboBoxClient"/>
+   </item>
+
+   <!-- Услуга -->
+   <item>
+    <widget class="QLabel" name="labelService">
+     <property name="text">
+      <string>Услуга:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="comboBoxService"/>
+   </item>
+
+   <!-- Количество -->
+   <item>
+    <widget class="QLabel" name="labelQuantity">
+     <property name="text">
+      <string>Количество:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSpinBox" name="spinBoxQuantity">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Статус -->
+   <item>
+    <widget class="QLabel" name="labelStatus">
+     <property name="text">
+      <string>Статус:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="comboBoxStatus">
+     <item>
+      <property name="text">
+       <string>В ожидании</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>В процессе</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Выполнено</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+
+   <!-- Дата -->
+   <item>
+    <widget class="QLabel" name="labelDate">
+     <property name="text">
+      <string>Дата:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDateEdit" name="dateEdit">
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+     <property name="date">
+      <date>
+       <year>2023</year>
+       <month>10</month>
+       <day>1</day>
+      </date>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Кнопки -->
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutButtons">
+     <item>
+      <widget class="QPushButton" name="buttonSave">
+       <property name="text">
+        <string>Сохранить</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonCancel">
+       <property name="text">
+        <string>Отмена</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

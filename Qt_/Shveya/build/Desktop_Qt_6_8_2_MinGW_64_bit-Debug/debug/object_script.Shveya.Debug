@@ -1,0 +1,12 @@
+debug/clients.o
+debug/main.o
+debug/mainwindow.o
+debug/materials.o
+debug/orderform.o
+debug/typeorderform.o
+debug/qrc_resources.o
+debug/moc_clients.o
+debug/moc_mainwindow.o
+debug/moc_materials.o
+debug/moc_orderform.o
+debug/moc_typeorderform.o
